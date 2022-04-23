@@ -1,15 +1,17 @@
 const router = require("express").Router();
 
-const res = require("express/lib/response");
 // import database
 const data = require("../../db/db.json");
 
-// get data
+// import write function
+const writeDB = require('../../lib/db')
+
+// get notes
 router.get("/notes", (req, res) => {
   res.json(data);
 });
 
-// add new data
+// add new note
 router.post("/notes", (req, res) => {
   if(data.length === 0)
   {
@@ -21,6 +23,18 @@ router.post("/notes", (req, res) => {
   }
   data.push(req.body);
   res.json(data)
+  writeDB(data)
 });
+
+// delete note function
+router.delete("/notes/:id", (req, res) => {
+
+  const index = data.map(function(item) {
+    return item.id
+}).indexOf(req.params.id);
+data.splice(index,1)
+writeDB(data)
+res.json(data)
+})
 
 module.exports = router;
