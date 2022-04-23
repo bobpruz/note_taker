@@ -1,12 +1,13 @@
 const express = require("express");
 const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes");
 
 // Express middleware
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Use Routes
-// app.use("/api", apiRoutes);
+app.use("/api", apiRoutes);
 app.use("/", htmlRoutes);
 
 app.use(express.static("public"));
