@@ -18,7 +18,7 @@ JavaScript, Node, NPM, express.js
 
 ## Website
 
-https://bobpruz.github.io/note_taker/
+https://bobpruz-note-taker.herokuapp.com/notes
 
 ## Maintainer
 
