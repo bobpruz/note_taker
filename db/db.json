@@ -1,6 +1,17 @@
 [
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
+  {
+    "title": "Create App",
+    "text": "create new app to take notes",
+    "id": "0"
+  },
+  {
+    "title": "Add Screenshot",
+    "text": "add screenshot to display in readme ",
+    "id": "1"
+  },
+  {
+    "title": "submit App",
+    "text": "submit working application to be graded",
+    "id": "2"
+  }
 ]
